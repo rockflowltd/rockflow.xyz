@@ -247,6 +247,10 @@ input, select, textarea {
 		margin: 0 0 2em 0;
 	}
 
+	p.shortmargin {
+		margin: 0 0 0.7em 0;
+	}
+
 	h1, h2, h3, h4, h5, h6 {
 		color: #ffffff;
 		font-family: Raleway, Helvetica, sans-serif;
@@ -3396,16 +3400,16 @@ input, select, textarea {
 			margin: 0 0 1.3em 0;
 		}
 
-			#banner .logo .icon {
-				border-radius: 100%;
-				border: solid 2px rgba(255, 255, 255, 0.125);
+			#banner .logo .icon, #banner .logo .fas {
+				/*border-radius: 100%;*/
+				/*border: solid 2px rgba(255, 255, 255, 0.125);*/
 				cursor: default;
 				display: inline-block;
 				font-size: 2em;
 				height: 2.25em;
 				line-height: 2.25em;
-				text-align: center;
-				width: 2.25em;
+				/*text-align: center;*/
+				/*width: 2.25em;*/
 			}
 
 			#banner .logo .name {
@@ -3504,12 +3508,12 @@ input, select, textarea {
 					margin: 0 0 1em 0;
 				}
 
-					#banner .logo .icon {
+					#banner .logo .icon, #banner .logo .fas {
 						font-size: 1.5em;
 					}
 
 				#banner h2 {
-					font-size: 1.5em;
+					font-size: 1.3em;
 				}
 
 				#banner p {
@@ -3819,7 +3823,7 @@ input, select, textarea {
 				-webkit-flex-direction: row-reverse;
 				-ms-flex-direction: row-reverse;
 				flex-direction: row-reverse;
-				text-align: right;
+				/*text-align: right;*/
 			}
 
 			.wrapper.spotlight:nth-child(2n - 1) .image {

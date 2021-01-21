@@ -89,19 +89,19 @@
 						<div class="inner">
 							<h2 class="major">Get in touch</h2>
 
-							<form method="post" action="#">
+							<form id="contact-form" method="post">
 								<div class="row gtr-uniform">
 									<div class="col-6 col-12-xsmall">
-										<label for="demo-name">Name</label>
-										<input type="text" name="demo-name" id="demo-name" value="" />
+										<label for="contact-name">Name</label>
+										<input type="text" name="contact-name" id="contact-name" value="" />
 									</div>
 									<div class="col-6 col-12-xsmall">
-										<label for="demo-email">Email</label>
-										<input type="email" name="demo-email" id="demo-email" value="" />
+										<label for="contact-email">Email</label>
+										<input type="email" name="contact-email" id="contact-email" value="" />
 									</div>
 									<div class="col-12">
-										<label for="demo-message">Message</label>
-										<textarea name="demo-message" id="demo-message" rows="6"></textarea>
+										<label for="contact-message">Message</label>
+										<textarea name="contact-message" id="contact-message" rows="6"></textarea>
 									</div>
 									<div class="col-12">
 										<ul class="actions">
@@ -110,6 +110,8 @@
 									</div>
 								</div>
 							</form>
+
+							<div id="thanks" style="display:none">Thank you for getting in touch!</div>
 
 							<ul class="copyright">
 								<li>&copy; 2020 RockFlow Ltd.</li>
@@ -129,4 +131,18 @@
 			<script src="assets/js/main.js"></script>
 
 	</body>
+
+<script>
+$('#contact-form').on('submit', function(e) {
+	e.preventDefault();
+	$(this).hide();
+	$('#thanks').show();
+	$.post('/contact', {
+		name: $('#contact-name').val(),
+		email: $('#contact-email').val(),
+		message: $('#contact-message').val(),
+	});
+});
+</script>
+
 </html>
